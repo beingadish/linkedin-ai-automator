@@ -1,14 +1,11 @@
-# test_db.py
-
 from state.db_manager import DBManager
 
-db = DBManager()
-db.log_task_run("daily_post", "success", "Post published")
-db.log_task_run("apply_jobs", "failure", "Login expired")
-rows = db.fetch_all_runs()
+# Directly use the database path
+db = DBManager("state/user_state.db")
 
-print("📄 All task logs:")
-for row in rows:
-    print(row)
+# Simulate running a task
+db.update_task_timestamp("daily_post")
 
-db.close()
+# Fetch last run time of the task
+last_run = db.get_last_run("daily_post")
+print(f"Last run time for daily_post: {last_run}")
