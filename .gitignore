@@ -39,3 +39,9 @@ Thumbs.db
 
 # Python dotenv
 .env
+
+*.pyc
+*.log
+state/*.json
+state/*.db
+data/*.csv
