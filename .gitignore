@@ -1,0 +1,41 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual Environment
+.venv/
+env/
+ENV/
+venv/
+
+# Pytest / test logs
+.cache/
+.pytest_cache/
+*.log
+
+# SQLite database
+*.sqlite
+*.db
+*.db-journal
+
+# CSV data outputs
+data/task_log.csv
+data/*.csv
+
+# Playwright browser cache
+playwright/.cache/
+playwright/.chromium/
+state/linkedin_cookies.json
+
+# VSCode / Editor folders
+.vscode/
+.idea/
+*.swp
+
+# OS metadata
+.DS_Store
+Thumbs.db
+
+# Python dotenv
+.env

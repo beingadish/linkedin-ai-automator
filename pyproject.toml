@@ -1,16 +1,10 @@
-[project]
+[tool.poetry]
 name = "linkedinautomation"
 version = "0.1.0"
 description = ""
-authors = [
-    {name = "Aadarsh Pandey", email = "aadarshpandey.pandey@gmail.com"}
-]
+authors = ["Aadarsh Pandey <aadarshpandey.pandey@gmail.com>"]
 readme = "README.md"
-requires-python = ">=3.9,<4.0"  # ✅ Match poetry.python version here
-
-[build-system]
-requires = ["poetry-core>=2.0.0,<3.0.0"]
-build-backend = "poetry.core.masonry.api"
+package-mode = false  # Optional: disables need for src layout or packaging
 
 [tool.poetry.dependencies]
 python = ">=3.9,<4.0"
@@ -19,3 +13,7 @@ python-dotenv = "^1.1.0"
 langchain = "^0.3.25"
 requests = "^2.32.4"
 pandas = "^2.3.0"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
