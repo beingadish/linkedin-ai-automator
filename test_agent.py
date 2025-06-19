@@ -1,10 +1,16 @@
-from agent.decision_engine import get_agent
+from agent.decision_engine import app
 
-# Get the agent
-agent = get_agent()
+if __name__ == "__main__":
+    initial_state = {
+        "messages": [
+            {"role": "system", "content": "Always use available tools to answer user questions."},
+            {"role": "user", "content": "What is my LinkedIn display name?"}
+        ],
+        "username": ""
+    }
 
-# Test the agent with a sample prompt
-response = agent.invoke("What can you do?")
-
-# Print the response
-print(response)
+    result = app.invoke(initial_state)
+    print("\n✅ Final State:", result)
+    print("\n📨 Messages:")
+    for msg in result["messages"]:
+        print(msg)
